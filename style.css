@@ -393,14 +393,14 @@ nav ul a:hover::after {
 
 #about{
     min-height: 650px;
-    padding: 100px 70px;
+    padding: 60px 70px;
 
     background-color: #F3E4CF;
     color: #151817;
 
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    gap: 65px;
 
     align-items: center;
 }
@@ -413,7 +413,7 @@ nav ul a:hover::after {
     font-weight: bold;
     letter-spacing: 3px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 
@@ -434,7 +434,7 @@ nav ul a:hover::after {
 
 /* DESCRIPTION */
 
-.bout-description {
+.about-description {
     max-width: 550px;
 
     margin-top: 25px;
@@ -443,6 +443,45 @@ nav ul a:hover::after {
     line-height: 1.7;
 }
 
+
+/* READ MORE BUTTON */
+
+.read-more-button {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 3px solid #151817;
+    border-radius: 20px;
+    background-color: #151817;
+    color: #F3E4CF;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.read-more-button:hover {
+    background-color: #E8B59A;
+    color: #151817;
+    transform: translateY(-4px);
+}
+
+/* EXPANDED ABOUT TEXT */
+.about-more {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+/* <READ MORE */
+.about-more {
+    display: none;
+}
+
+.about-more.show {
+    display: block;
+}
 
 /* INTERESTS */
 
@@ -528,3 +567,36 @@ nav ul a:hover::after {
     line-height: 1.5;
 }
 
+/* SKILLS */
+#skills {
+    position: relative;
+    
+    min-height: 650px;
+    padding: 100px 70px;
+
+    background-color: #151817;
+    color: #F3E4CF;
+
+    margin-top: 0px;
+}
+
+.skill-group {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin-right: 2%;
+    transform: translate(60%, -20px);
+}
+
+/* SKILLS DECORATION */
+
+.skills-decoration {
+    margin: 10px 0 20px 10%;
+    text-align: center;
+}
+
+.skills-decoration img {
+    max-width: 800px;
+    width: 65%;
+    height: auto;
+}

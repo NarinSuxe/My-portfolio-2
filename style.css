@@ -112,6 +112,7 @@ nav ul a:hover::after {
     position: relative;
 }
 
+/* STARTS */ 
 #hero::before {
     content: "✦";
     position: absolute;
@@ -149,7 +150,7 @@ nav ul a:hover::after {
     margin: 0;
     color: #F3E4CF;
     font-size: clamp(4rem, 5vw, 5.5rem);
-    line-height: 0.95;
+    line-height: 0.98;
     letter-spacing: -3px;
 }
 
@@ -753,7 +754,9 @@ color: #E8B59A;
 /* PROJECT LABEL */
 
 #projects > .section-label {
-    margin: 0 0 30px 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
 }
 
 /* PROJECT CARDS */
@@ -775,3 +778,81 @@ color: #E8B59A;
     height: auto;
     display: block;
 }
+
+/* CONTACT */
+#contact{
+    padding: 10px 70px 30px;
+    background-color: #151817;
+    color: #F3E4CF;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* CONTACT TEXT */
+
+#contact>.section-label{
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+#contact> h2{
+
+    grid-column: 1;
+    grid-row: 2;
+
+    color:#F3E4CF;
+    font-size: 3.5rem;
+    list-style: 1.05;
+}
+
+#contact> p:not(.section-label){
+    grid-column: 1;
+    grid-row:3;
+    
+    max-width: 500px;
+    margin: 0;
+    color: #F3E4CF;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+#contact> form{
+    grid-column: 2;
+    grid-row: 1/ 5;
+}
+
+/* CONTACT LINKS */
+
+.contact-links{
+    grid-column: 1;
+    grid-row: 4;
+
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}¨
+
+.contact-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid #AEBFA3;
+    border-radius: 12px;
+
+    transform: 0.3 ease;
+}
+
+.contact-links img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+

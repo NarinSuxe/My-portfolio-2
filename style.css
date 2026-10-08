@@ -2,6 +2,14 @@
 * {
     box-sizing: border-box;
 }
+/* Visible focus for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #E8B59A;
+    outline-offset: 4px;
+}
 
 html {
     scroll-behavior: smooth;
@@ -36,9 +44,9 @@ header{
 
 header{
     transition: 
-    padding 0.3s ease,
-    background-color 0.3s ease,
-    border-shadow 0.3s ease;
+        padding 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 header.scrolled {
@@ -398,6 +406,7 @@ nav ul a:hover::after {
 
     background-color: #F3E4CF;
     color: #151817;
+    border-top: 1px solid rgba(243, 228, 207, 0.25);
 
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -568,7 +577,7 @@ nav ul a:hover::after {
     line-height: 1.5;
 }
 
-/* SKILLS */
+                    /* SKILLS */
 #skills {
     position: relative;
     
@@ -576,12 +585,14 @@ nav ul a:hover::after {
     min-height: 0px;
     padding: 50px 70px 30px;
 
+    border-top: 1px solid rgba(243, 228, 207, 0.25);
+
     background-color: #151817;
     color: #F3E4CF;
 
     display: grid;
-     /* 4 columns:
-       intro | UX | Frontend | Tools */
+     
+     /*  intro | UX | Frontend | Tools */
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
     gap: 10px;
     row-gap: 0px;
@@ -739,11 +750,11 @@ color: #E8B59A;
     grid-row: 1;
 }
 
-/* PROJECTS */
+                /* PROJECTS */
 
 #projects {
     min-height: 0;
-    padding: 50px 30px 30px;
+    padding: 60px 70px 30px;
 
     background-color: #151816;
     color: #F3E4CF;
@@ -779,11 +790,15 @@ color: #E8B59A;
     display: block;
 }
 
-/* CONTACT */
+.project-image:hover {
+    transform: translateY(-8px);
+}
+                /* CONTACT */
 #contact{
-    padding: 10px 70px 30px;
+    padding: 60px 70px 30px;
     background-color: #151817;
     color: #F3E4CF;
+    border-top: 1px solid rgba(243, 228, 207, 0.25);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -800,7 +815,7 @@ color: #E8B59A;
 }
 
 #contact> h2{
-
+    margin-top: -30px;
     grid-column: 1;
     grid-row: 2;
 
@@ -812,7 +827,8 @@ color: #E8B59A;
 #contact> p:not(.section-label){
     grid-column: 1;
     grid-row:3;
-    
+    transform: translateY(-70px);
+
     max-width: 500px;
     margin: 0;
     color: #F3E4CF;
@@ -827,13 +843,14 @@ color: #E8B59A;
 
 /* CONTACT LINKS */
 
-.contact-links{
+.contact-links {
     grid-column: 1;
     grid-row: 4;
-
+    transform: translateY(-70px);
     display: flex;
-    gap: 30px;
+    gap: 35px;
     margin-top: 20px;
+    width: fit-content;
 }¨
 
 .contact-links a{
@@ -841,8 +858,8 @@ color: #E8B59A;
     align-items: center;
     justify-content: center;
 
-    width: 55px;
-    height: 55px;
+    width: 90px;
+    height: 90px;
 
     border: 2px solid #AEBFA3;
     border-radius: 12px;
@@ -851,8 +868,55 @@ color: #E8B59A;
 }
 
 .contact-links img{
-    width: 20px;
-    height: 20px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 
+
+/* Contact form */
+#contact-form{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#contact-form input,
+#contact-form textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #F3E4CF;
+    color:#F3E4CF;
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+#contact-form textarea{
+    width: 100%;
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* conect form buttom */
+#contact-form button{
+    align-self: flex-start;
+    padding: 15px 24px;
+    background-color: #E8B59A;
+    color: #151817;
+    border: none;
+    border: 1px solid #AEBFA3;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+#contact-form button:hover {
+    background-color: #F3E4CF;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder{
+    color:#AEBFA3;
+}

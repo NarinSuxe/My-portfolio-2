@@ -2,6 +2,16 @@
 * {
     box-sizing: border-box;
 }
+
+footer {
+    padding: 20px 70px;
+    text-align: left;
+}
+
+footer p {
+    margin: 0;
+    font-size: x-small;
+}
 /* Visible focus for keyboard navigation */
 a:focus-visible,
 button:focus-visible,
@@ -42,8 +52,8 @@ header{
 
 /* HEADER SCROLLED STATE */
 
-header{
-    transition: 
+header {
+    transition:
         padding 0.3s ease,
         background-color 0.3s ease,
         box-shadow 0.3s ease;
@@ -488,9 +498,7 @@ nav ul a:hover::after {
     line-height: 1.7;
 }
 /* <READ MORE */
-.about-more {
-    display: none;
-}
+
 
 .about-more.show {
     display: block;
@@ -615,7 +623,7 @@ nav ul a:hover::after {
     font-size: 2.7rem;
     line-height: 1.05;
     font-weight: 700;
-    letter-spacing: -1;
+    letter-spacing: -1px;
 
     margin: 0 ;
     max-width: 390px;
@@ -639,13 +647,13 @@ color: #E8B59A;
 }
 
 .skill-group h3{
-    font-weight: 1.2rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     margin-bottom: 12px;
 }
 
 .skill-group ul{
-    margin: 0 20;
+    margin: 0 20px;
     padding-left: 15px;
 }
 
@@ -824,7 +832,7 @@ color: #E8B59A;
 
     color:#F3E4CF;
     font-size: 3.5rem;
-    list-style: 1.05;
+    line-height: 1.05;
 }
 
 #contact> p:not(.section-label){
@@ -867,7 +875,11 @@ color: #E8B59A;
     border: 2px solid #AEBFA3;
     border-radius: 12px;
 
-    transform: 0.3 ease;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-8px);
 }
 
 .contact-links img{
@@ -1067,7 +1079,6 @@ color: #E8B59A;
         margin: 0;
         transform: none;
         align-self: stretch;
-        margin-top: px;
     }
 
     #skills .skill-group h3 {

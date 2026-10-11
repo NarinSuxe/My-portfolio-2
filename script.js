@@ -21,10 +21,10 @@ const aboutMore = document.querySelectorAll('.about-more');
 // ADD AN EVENT LISTENER TO THE "READ MORE" BUTTON THAT LISTENS FOR THE "click" EVENT
 readMoreButton.addEventListener('click', () => {
 
-aboutMore.forEach((paragaph) => {
-     paragaph.classList.toggle('show');
-});   
-     if (aboutMore[0].classList.contains('show')) {
+    aboutMore.forEach((paragaph) => {
+        paragaph.classList.toggle('show');
+    });
+    if (aboutMore[0].classList.contains('show')) {
         readMoreButton.textContent = 'Read less';
     } else {
         readMoreButton.textContent = 'Read more';
